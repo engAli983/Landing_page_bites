@@ -1,363 +1,257 @@
-/* Start Varibal */
-:root {
-  --main-color: crimson;
-  --second-color: #fff;
-  --main-transition: .3s;
-}
-/* End Varibal */
-/* Start Header */
-@media (max-width:795px) {
-  .header .container .nav .menu li{
-    margin-right: 20px;
-  }
-  .header .container .nav .reserve-menu .reserve {
-    padding: 9px 16px;
-    margin-left: 7px;
-    font-size: 16px;
-  }
-}
-@media (max-width:767px) {
-  .header .container {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-  .header .container .nav {
-    flex-direction: column;
-}
-  .header .container .nav .menu li{
-    margin-right: 15px;
-  }
-  .header .container .nav .reserve-menu {
-    margin-top: 16px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .header .container .nav .reserve-menu .reserve {
-    font-size: 16px;
-    padding: 9px 18px;
-  }
-  .header .container .nav .menu-header li:not(:last-of-type) {
-    margin-right: 20px;
-  }
-  .header .container .nav .menu-header li:last-of-type {
-    margin-right: 0px;
-  }
-}
-/* End Header */
-/* Start About Us */
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* ---------- Tablet (max 991px) ---------- */
 @media (max-width: 991px) {
-  .about-us .container .description {
-    gap: 0;
+  /* Services */
+  .services-content {
+    gap: 3rem !important;
   }
-}
-@media (max-width: 767px) {
-  .about-us .container .description {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-us .container .description .des {
-    width: 100%;
-    margin-top: 35px;
-    margin-left: 25px;
-  }
-  .about-us .container .description .des h1 {
-    font-size: 30px;
-    padding-top: 20px;
-  }
-  .about-us .container .description .des p {
-    margin-bottom: 25px;
-    margin-top: -6px;
-    font-size: 18px;
-  }
-  .about-us .container .description .dish-categories {
-    width: 100%;
-  }
-  .about-us .container .description .dish-categories .image > img  {
-    left: -24px;
-    margin-top: -100px;
-  }
-  .about-us .container .description .dish-categories .image ul {
-    margin-top: 110px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
-  
-}
-@media (min-width:768px) {
-  .about-us .container .description .dish-categories .image ul li {
-    position: relative;
-    top: -212px;
-    right: -318px;
-  }
-  .about-us .container .description .dish-categories .image > img {
-    left: 0;
-  }
-}
-/* End About Us */
-/* Start Popular Dishes */
-@media (max-width: 767px) {
-  .popular-dishes {
-    padding-top: 45px;
-  }
-  .popular-dishes .cards {
-    padding-top: 50px;
-    grid-template-columns:  minmax(220px, 1fr);
-  }
-}
-/* End Popular Dishes */
-/* Start Services */
-@media (max-width: 991px) {
-  .services .container .services-content {
-    gap: 100px;
-  }
-}
-@media (max-width: 900px) {
-  .services .container .services-content {
-    gap: 80px;
-  }
-  .services .container .services-content .image .salad {
-    right: -65px;
-  }
-}
-@media (max-width:767px) {
-  .services {
-    padding: 15px 0;
-  }
-  .services .container .services-content {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .services .container .services-content .image .chef {
-    width: 315px;
-  }
-  .services .container .services-content .services-text {
-    text-align: center;
-  }
-  .services .container .services-content .services-text p {
-    line-height: 1.4;
-  }
-  .services .container .services-content .image .salad,
-  .services .container .services-content .image .cheese {
-    display: none;
-  }
-  .services .container .services-content .services-text a {
-    margin: 20px auto 0;
-  }
-}
-/* End Services */
-/* Start Menu */
-@media (max-width: 767px) {
-  .section-menu {
-    padding: 35px 0;
-  }
-  .section-menu .cards {
-    padding-top: 50px;
-    grid-template-columns:  minmax(220px, 1fr);
-  }
-  .section-menu .container .menu-list {
-    gap: 35px 0;
-  }
-  .section-menu .container .menu-list li {
-    margin-left: 5px;
-  }
-}
-/* End Menu */
-/* Start reservation-cta */
-@media (max-width: 767px) {
-  .reservation-cta .container .reserv-content {
-    flex-direction: column-reverse;
-  }
-  .reservation-cta .container .reserv-content .left {
-    width: 100%;
-  }
-  .reservation-cta .container .reserv-content .left h1 {
-    font-size: 30px;
-    margin-top: 35px;
-  }
-}
-/* End reservation-cta */
-/* Start customers say */
-@media (max-width:991px) {
-  .opinions .container .customers .customer {
-    max-width: 355px;
-  }
-}
-@media (max-width:767px) {
-  .opinions {
-    padding-top: 40px;
-  }
-  .opinions .head h2 {
-    font-size: 24px;
-  }
-  .opinions .head .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .opinions .head .icon i.right {
-    margin-left: 14px;
-  }
-  .opinions .container .customers {
-    text-align: center;
-    justify-content: center;
-  }
-  .opinions .container .customers .customer {
-    max-width: 500px;
-  }
-}
-@media (min-width:992px) {
-  .opinions .container .customers .customer {
-    width: 303px;
-  }
-}
-@media (min-width:1200px) {
-  .opinions .container .customers .customer {
-    width: 370px;
-  }
-}
-/* End customers say */
-/* Start Chefs Team */
-@media (max-width: 767px) {
-  .chefs-team { 
-    padding-top: 30px;
-  }
-  .chefs-team .head h2 { 
-    font-size: 30px;
-  }
-  .chefs-team .chefs {
-    grid-template-columns: minmax(220px, 1fr);
-    gap: 15px 0;
-  }
-  .chefs-team .chefs .chef:hover {
-    transform: scale(1.1);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-/* End Chefs Team */
-/* Start Download App */
-@media (max-width: 1199px) {
-  .get-app .container .link .download .iphone {
-    padding: 25px 12px;
-  }
-  .get-app .container .link .download .iphone i {
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  .get-app .container .link .download .iphone .info p {
-    margin-top: 0;
-  }
-  .get-app .container .link .download .android {
-    padding: 25px 12px;
-  }
-  .get-app .container .link .download .android i {
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  .get-app .container .link .download .android .info p {
-    margin-top: 0;
-  }
-  .get-app .container .link .download .android .info p {
-    font-size: 17px;
-  }
-  .get-app .container .mobile .rice { 
-    display: none;
-  }
-}
-@media (max-width: 991px) {
-  .get-app .container .link {
-    width: 100%;
-  }
-  .get-app .container .mobile .phone {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .get-app .container .link > span {
-    font-size: 24px;
-  }
-  .get-app .container .link .download .iphone {
-    margin-right: 10px;
-  }
-  .get-app .container .link .download .iphone,
-  .get-app .container .link .download .android {
-    padding: 28px 32px;
-  }
-  .get-app .container .link .download {
-    justify-content: center;
-  }
-  .get-app .container .link .download .info p {
-    display: none;
-  }
-}
-/* End Download App */
-/* Start Footer */
-@media (max-width: 991px) {
-  .footer .container .contact {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0 30px;
-  }
-  .footer .container .contact .social {
-    width: 25%;
-    margin-right: 120px;
-  }
-  .footer .container .contact .social h1 {
-    font-size: 25px;
-  }
-  .footer .container .contact .social form i {
+
+  .services-image .salad {
     right: -60px;
   }
-  .footer .container .contact .social .media {
-    margin-right: 8px;
-    width: 35px;
-    height: 35px;
+
+  /* Reviews */
+  .review-card {
+    flex: 0 0 300px;
   }
-  .footer .container .contact .service,
-  .footer .container .contact .quick-links,
-  .footer .container .contact .about,
-  .footer .container .contact .help {
-    width: 25%;
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-xl);
+  }
+
+  /* App */
+  .app-mockup {
+    display: none;
   }
 }
+
+/* ---------- Mobile (max 767px) ---------- */
 @media (max-width: 767px) {
-  .footer {
-    padding: 0;
+  /* Header */
+  .header .menu-toggle {
+    display: flex;
+    order: -1;
   }
-  .footer .container .contact {
+
+  .header .nav {
+    gap: var(--sp-md);
+  }
+
+  .header .menu-header {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 270px;
+    height: 100vh;
+    background: var(--clr-white);
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem var(--sp-xl) var(--sp-xl);
+    box-shadow: var(--shadow-lg);
+    z-index: 105;
+    gap: 0;
+    transition: right var(--transition-base);
+  }
+
+  .header .menu-header.open {
+    right: 0;
+  }
+
+  .header .menu-header li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .header .menu-header li a {
+    display: block;
+    padding: var(--sp-md) 0;
+    font-size: var(--fs-base);
+  }
+
+  .reserve-menu .reserve {
+    padding: 6px 14px;
+    font-size: var(--fs-xs);
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    flex-direction: column;
     text-align: center;
   }
-  .footer .container .contact .social .media-container {
+
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .hero-search {
     justify-content: center;
   }
-  .footer .container .contact .social {
-    width: 100%;
-    margin-right: 0;
+
+  .dish-categories {
+    order: 2;
   }
-  .footer .container .contact .social h1 {
-    font-size: 22px;
-    padding-bottom: 15px;
+
+  .hero-image > img {
+    width: min(300px, 90%);
+    margin: 0 auto;
   }
-  .footer .container .contact .social form i {
-    right: 73px;
-    width: 35px;
-    height: 35px;
-    box-shadow: 0px 6px 16px #0000003d;
+  .hero-image::before {
+    display: none;
   }
-  .footer .container .contact .social .media {
-    margin-right: 8px;
-    width: 35px;
-    height: 35px;
+
+  .category-list {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none;
+    margin-top: var(--sp-lg);
   }
-  .footer .container .contact .service,
-  .footer .container .contact .quick-links,
-  .footer .container .contact .about,
-  .footer .container .contact .help {
-    width: 100%;
+
+  /* Popular Dishes */
+  .popular-dishes .cards-track .card {
+    flex: 0 0 85%;
+  }
+
+  /* Services */
+  .services-content {
+    flex-direction: column;
+    gap: 2rem !important;
+  }
+
+  .services-image .chef {
+    width: min(320px, 100%);
+  }
+
+  .services-image .salad,
+  .services-image .cheese {
+    display: none;
+  }
+
+  .services-text {
+    text-align: center;
+  }
+
+  .services-text .btn-primary {
+    margin: 0 auto;
+  }
+
+  /* Menu */
+  .menu-tabs {
+    gap: var(--sp-xs);
+  }
+
+  .tab-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: var(--fs-xs);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reservation */
+  .reserv-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .reserv-text h2 {
+    font-size: var(--fs-xl);
+    margin-top: var(--sp-lg);
+  }
+
+  .image-circle img {
+    width: min(300px, 100%);
+  }
+
+  .image-circle::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Reviews */
+  .review-card {
+    flex: 0 0 85%;
+    padding: var(--sp-lg);
+  }
+
+  .section-head h2 {
+    font-size: var(--fs-xl);
+  }
+
+  /* Chefs */
+  .chef-card {
+    flex: 0 0 70%;
+  }
+
+  /* App */
+  .get-app .container {
+    padding: var(--sp-xl);
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-btns {
+    justify-content: center;
+  }
+
+  .store-info small {
+    display: none;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .newsletter-col form {
+    max-width: 300px;
+    margin-inline: auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Scroll Top */
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
   }
 }
-/* End Footer */
+
+/* ---------- Small Mobile (max 400px) ---------- */
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .store-btn {
+    padding: var(--sp-sm) var(--sp-md);
+  }
+
+  .store-btn i {
+    font-size: 1.5rem;
+  }
+}

@@ -1,592 +1,1163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page | Restaurant</title>
+    <meta
+      name="description"
+      content="Bites Restaurant — Discover delicious dishes, reserve your table online, and enjoy premium dining experiences with our world-class chefs."
+    />
+    <title>Bites | Premium Restaurant & Dining</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS (correct order) -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
     <!-- Start Header -->
-    <div class="header">
+    <header class="header" id="top">
       <div class="container">
         <div class="logo">
-          <a href="#"><i class="fa-solid fa-utensils"></i></a>
+          <a href="#top" aria-label="Bites Home"
+            ><i class="fa-solid fa-utensils"></i
+          ></a>
           <span>Bites</span>
         </div>
-        <div class="nav">
+        <nav class="nav">
+          <button
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
           <ul class="menu-header">
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#section-menu">Menu</a></li>
-            <li><a href="#opinions">Reviews</a></li>
-            <li><a href="#chefs-team">Blog</a></li>
-            <li><a href="#footer">Contacts</a></li>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#popular-dishes">Popular</a></li>
+            <li><a href="#services">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#contact">Contacts</a></li>
           </ul>
           <div class="reserve-menu">
-            <a class="cart" href="#"
-              ><i class="fa-solid fa-basket-shopping"></i
-            ></a>
+            <a class="cart" href="#" aria-label="Shopping cart">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span class="cart-count">0</span>
+            </a>
             <a class="reserve" href="#">Reserve Table</a>
           </div>
-        </div>
+        </nav>
       </div>
-    </div>
+    </header>
     <!-- End Header -->
-    <!-- Start About Us -->
-    <div class="about-us">
-      <div class="container">
-        <div class="description">
-          <div class="des">
-            <h1>We Serve The Test You Love&#128525;</h1>
-            <p>
-              This type of restaurant which typically serves food and drinks, in
-              addition to light refreshments such as baked goods or snacks. The
-              term comes from the rench word meaning food.
-            </p>
-            <form>
-              <button>Explore Food</button>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search" />
-            </form>
-          </div>
-          <div class="dish-categories">
-            <div class="image">
-              <img src="images/About-us.webp" alt="" loading="lazy" />
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="images/dishes.webp" alt="" loading="lazy" /></a
-                  ><span>Dishes</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/dessert.webp" alt="" loading="lazy" /></a
-                  ><span>Dessert</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/coffee.webp" alt="" loading="lazy" /></a
-                  ><span>Drinkes</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/platter.webp" alt="" loading="lazy" /></a
-                  ><span>Platter</span>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="images/snacks.webp" alt="" loading="lazy" /></a
-                  ><span>Snacks</span>
-                </li>
-              </ul>
+
+    <main>
+      <!-- Start Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>We Serve The Taste You Love 😍</h1>
+              <p>
+                Experience culinary excellence with our hand-crafted dishes.
+                From fresh ingredients to mouth-watering flavors, every bite is
+                a journey to remember.
+              </p>
+              <form class="hero-search" id="search-form">
+                <button type="button">Explore Food</button>
+                <div class="search-wrapper">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    id="search-input"
+                    autocomplete="off"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="dish-categories">
+              <div class="hero-image">
+                <img
+                  src="images/About-us.webp"
+                  alt="Delicious food bowl served at Bites restaurant"
+                  loading="lazy"
+                />
+                <ul class="category-list">
+                  <li>
+                    <a href="#menu"
+                      ><img
+                        src="images/dishes.webp"
+                        alt="Dishes icon"
+                        loading="lazy"
+                    /></a>
+                    <span>Dishes</span>
+                  </li>
+                  <li>
+                    <a href="#menu"
+                      ><img
+                        src="images/dessert.webp"
+                        alt="Dessert icon"
+                        loading="lazy"
+                    /></a>
+                    <span>Dessert</span>
+                  </li>
+                  <li>
+                    <a href="#menu"
+                      ><img
+                        src="images/coffee.webp"
+                        alt="Drinks icon"
+                        loading="lazy"
+                    /></a>
+                    <span>Drinks</span>
+                  </li>
+                  <li>
+                    <a href="#menu"
+                      ><img
+                        src="images/platter.webp"
+                        alt="Platter icon"
+                        loading="lazy"
+                    /></a>
+                    <span>Platter</span>
+                  </li>
+                  <li>
+                    <a href="#menu"
+                      ><img
+                        src="images/snacks.webp"
+                        alt="Snacks icon"
+                        loading="lazy"
+                    /></a>
+                    <span>Snacks</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- End About Us -->
-    <!-- Start Popular Dishes -->
-    <div class="popular-dishes" id="about-us">
-      <div class="container">
-        <div class="head">
-          <h2>popular Dishes</h2>
-          <div class="icon">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right right"></i>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- Start Popular Dishes -->
+      <section class="popular-dishes" id="popular-dishes">
+        <div class="container">
+          <div class="section-head">
+            <h2>Popular Dishes</h2>
+            <div class="carousel-arrows" data-carousel="popular-cards">
+              <button class="arrow-btn arrow-left" aria-label="Previous dishes">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="arrow-btn arrow-right" aria-label="Next dishes">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="cards-track" id="popular-cards">
+            <div class="card">
+              <img
+                class="card-img-small"
+                src="images/pasta.webp"
+                alt="Creamy Italian pasta"
+                loading="lazy"
+              />
+              <h3>Pasta</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Pasta is a type of Italian food typically made from unleavened
+                dough.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Pasta"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="images/french-fires.webp"
+                alt="Crispy French fries"
+                loading="lazy"
+              />
+              <h3>French Fries</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Fries are batons of deep-fried potato, commonly served hot and
+                crispy.
+              </p>
+              <div class="price">
+                <span>$55.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="French Fries"
+                  data-price="55.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="images/Chicken-Shawarma.webp"
+                alt="Chicken Shawarma wrap"
+                loading="lazy"
+              />
+              <h3>Chicken Shawarma</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                A popular Middle Eastern dish made with spiced meat roasted on a
+                spit.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Chicken Shawarma"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="images/fish-curry.webp"
+                alt="Spicy fish curry"
+                loading="lazy"
+              />
+              <h3>Fish Curry</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Traditional Indian fish curry made with spicy gravy and herbs.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Fish Curry"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="cards">
-          <div class="card">
+      </section>
+      <!-- End Popular Dishes -->
+
+      <!-- Start Services -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="services-content">
+            <div class="services-image">
+              <img
+                class="salad"
+                src="images/salad.webp"
+                alt="Fresh salad garnish"
+                loading="lazy"
+              />
+              <img
+                class="chef"
+                src="images/chef.webp"
+                alt="Professional chef preparing food"
+                loading="lazy"
+              />
+              <img
+                class="cheese"
+                src="images/cheese.webp"
+                alt="Artisan cheese selection"
+                loading="lazy"
+              />
+            </div>
+            <div class="services-text">
+              <h2>We Are More Than Just a Restaurant</h2>
+              <p>
+                We believe in delivering a complete premium experience. Whether
+                you're dining in, ordering online, or hosting an event, our
+                top-tier chefs and dedicated staff ensure perfection.
+              </p>
+              <div class="services-list">
+                <div class="services-item">
+                  <img
+                    src="images/map.webp"
+                    alt="Online order icon"
+                    loading="lazy"
+                  />
+                  Online Order
+                </div>
+                <div class="services-item">
+                  <img
+                    src="images/map.webp"
+                    alt="Pre-reservation icon"
+                    loading="lazy"
+                  />
+                  Pre-Reservation
+                </div>
+                <div class="services-item">
+                  <img
+                    src="images/service.webp"
+                    alt="24/7 service icon"
+                    loading="lazy"
+                  />
+                  24/7 Service
+                </div>
+                <div class="services-item">
+                  <img
+                    src="images/food-place.webp"
+                    alt="Organized place icon"
+                    loading="lazy"
+                  />
+                  Organized Foodie Place
+                </div>
+                <div class="services-item">
+                  <img
+                    src="images/clean-kitchen.webp"
+                    alt="Clean kitchen icon"
+                    loading="lazy"
+                  />
+                  Clean Kitchen
+                </div>
+                <div class="services-item">
+                  <img
+                    src="images/super-chef.webp"
+                    alt="Super chefs icon"
+                    loading="lazy"
+                  />
+                  Super Chefs
+                </div>
+              </div>
+              <a href="#" class="btn-primary">About Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services -->
+
+      <!-- Start Menu -->
+      <section class="section-menu" id="menu">
+        <div class="container">
+          <h2>Our Regular Menu Pack</h2>
+          <ul class="menu-tabs">
+            <li>
+              <button class="tab-btn active" data-filter="all">All</button>
+            </li>
+            <li>
+              <button class="tab-btn" data-filter="special">
+                Special Food
+              </button>
+            </li>
+            <li>
+              <button class="tab-btn" data-filter="mexican">Mexican</button>
+            </li>
+            <li>
+              <button class="tab-btn" data-filter="italian">Italian</button>
+            </li>
+            <li>
+              <button class="tab-btn" data-filter="japanese">Japanese</button>
+            </li>
+            <li>
+              <button class="tab-btn" data-filter="drinks">Drinks</button>
+            </li>
+            <li><button class="tab-btn" data-filter="lunch">Lunch</button></li>
+          </ul>
+          <div class="cards menu-cards">
+            <div class="card" data-category="italian">
+              <img
+                class="card-img-small"
+                src="images/pasta.webp"
+                alt="Creamy Italian pasta"
+                loading="lazy"
+              />
+              <h3>Pasta</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Pasta is a type of Italian food typically made from unleavened
+                dough.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Pasta"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="special lunch">
+              <img
+                src="images/french-fires.webp"
+                alt="Crispy French fries"
+                loading="lazy"
+              />
+              <h3>French Fries</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Fries are batons of deep-fried potato, commonly served hot and
+                crispy.
+              </p>
+              <div class="price">
+                <span>$55.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="French Fries"
+                  data-price="55.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="mexican special">
+              <img
+                src="images/Chicken-Shawarma.webp"
+                alt="Chicken Shawarma wrap"
+                loading="lazy"
+              />
+              <h3>Chicken Shawarma</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                A popular Middle Eastern dish made with spiced meat roasted on a
+                spit.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Chicken Shawarma"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="japanese special">
+              <img
+                src="images/fish-curry.webp"
+                alt="Spicy fish curry"
+                loading="lazy"
+              />
+              <h3>Fish Curry</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Traditional Indian fish curry made with spicy gravy and herbs.
+              </p>
+              <div class="price">
+                <span>$35.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Fish Curry"
+                  data-price="35.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="italian lunch">
+              <img
+                class="card-img-small"
+                src="images/pasta.webp"
+                alt="Italian pasta dish"
+                loading="lazy"
+              />
+              <h3>Penne Arrabbiata</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>Spicy penne pasta with garlic tomato sauce and fresh herbs.</p>
+              <div class="price">
+                <span>$38.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Penne Arrabbiata"
+                  data-price="38.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="special lunch">
+              <img
+                src="images/french-fires.webp"
+                alt="Loaded French fries"
+                loading="lazy"
+              />
+              <h3>Loaded Fries</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Crispy fries topped with cheese, jalapeños, and special sauce.
+              </p>
+              <div class="price">
+                <span>$55.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Loaded Fries"
+                  data-price="55.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="mexican">
+              <img
+                src="images/Chicken-Shawarma.webp"
+                alt="Spicy chicken wrap"
+                loading="lazy"
+              />
+              <h3>Spicy Chicken Wrap</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Grilled spicy chicken wrapped with fresh veggies and tangy
+                sauce.
+              </p>
+              <div class="price">
+                <span>$32.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Spicy Chicken Wrap"
+                  data-price="32.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+            <div class="card" data-category="japanese drinks">
+              <img
+                src="images/fish-curry.webp"
+                alt="Japanese seafood"
+                loading="lazy"
+              />
+              <h3>Teriyaki Bowl</h3>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Authentic Japanese teriyaki bowl with seasoned fish and rice.
+              </p>
+              <div class="price">
+                <span>$42.00</span>
+                <button
+                  class="add-to-cart"
+                  data-name="Teriyaki Bowl"
+                  data-price="42.00"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Menu -->
+
+      <!-- Start Reservation CTA -->
+      <section class="reservation-cta" id="reservation">
+        <div class="container">
+          <div class="reserv-content">
+            <div class="reserv-text">
+              <h2>Do You Have Any Dinner Plans Today? Reserve Your Table</h2>
+              <p>
+                Skip the wait and secure your spot! Book your table online in
+                seconds and enjoy an unforgettable dining experience with your
+                loved ones.
+              </p>
+              <a href="#" class="btn-primary">Make Reservation</a>
+            </div>
+            <div class="reserv-image">
+              <div class="image-circle">
+                <img
+                  src="images/Casserole.webp"
+                  alt="Delicious casserole dish"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Reservation CTA -->
+
+      <!-- Start Customer Reviews -->
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <div class="section-head">
+            <h2>What Our Customers Say?</h2>
+            <div class="carousel-arrows" data-carousel="reviews-track">
+              <button class="arrow-btn arrow-left" aria-label="Previous review">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="arrow-btn arrow-right" aria-label="Next review">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="reviews-track" id="reviews-track">
+            <article class="review-card">
+              <p>
+                "This place is great! Atmosphere is chill and cool but the staff
+                is also really friendly. They know what they're doing and what
+                they're talking about, and you can tell making the customers
+                happy is their main priority."
+              </p>
+              <div class="reviewer">
+                <img
+                  src="images/customer-01.webp"
+                  alt="Customer Savannah Nguyen"
+                  loading="lazy"
+                />
+                <h4>Savannah Nguyen</h4>
+              </div>
+            </article>
+            <article class="review-card">
+              <p>
+                "Absolutely delicious food! The flavors are incredible, and the
+                presentation is top-notch. Every visit is a memorable
+                experience, and I always leave with a smile on my face."
+              </p>
+              <div class="reviewer">
+                <img
+                  src="images/customer-02.webp"
+                  alt="Customer Alex Thompson"
+                  loading="lazy"
+                />
+                <h4>Alex Thompson</h4>
+              </div>
+            </article>
+            <article class="review-card">
+              <p>
+                "Best restaurant in town! The ambiance is perfect for a romantic
+                dinner. Service is outstanding and the menu has something for
+                everyone. Five stars without hesitation!"
+              </p>
+              <div class="reviewer">
+                <img
+                  src="images/customer-03.webp"
+                  alt="Customer Maria Garcia"
+                  loading="lazy"
+                />
+                <h4>Maria Garcia</h4>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- End Customer Reviews -->
+
+      <!-- Start Chefs Team -->
+      <section class="chefs-team" id="chefs">
+        <div class="container">
+          <div class="section-head">
+            <h2>Meet Our Chefs</h2>
+            <div class="carousel-arrows" data-carousel="chefs-track">
+              <button class="arrow-btn arrow-left" aria-label="Previous chef">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="arrow-btn arrow-right" aria-label="Next chef">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="chefs-track" id="chefs-track">
+            <div class="chef-card">
+              <img
+                src="images/chef-01.webp"
+                alt="Chef Marcus Laurent"
+                loading="lazy"
+              />
+              <h3>Marcus Laurent</h3>
+              <span class="chef-role">Head Chef</span>
+            </div>
+            <div class="chef-card">
+              <img
+                src="images/chef-02.webp"
+                alt="Chef Angela Ross"
+                loading="lazy"
+              />
+              <h3>Angela Ross</h3>
+              <span class="chef-role">Pastry Chef</span>
+            </div>
+            <div class="chef-card">
+              <img
+                src="images/chef-03.webp"
+                alt="Chef Daniel Kim"
+                loading="lazy"
+              />
+              <h3>Daniel Kim</h3>
+              <span class="chef-role">Sous Chef</span>
+            </div>
+            <div class="chef-card">
+              <img
+                src="images/chef-04.webp"
+                alt="Chef Sophia Martinez"
+                loading="lazy"
+              />
+              <h3>Sophia Martinez</h3>
+              <span class="chef-role">Grill Master</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Chefs Team -->
+
+      <!-- Start Download App -->
+      <section class="get-app" id="app">
+        <div class="container">
+          <div class="app-text">
+            <span>Never Feel Hungry!</span>
+            <span>Download Our Mobile App</span>
+            <span>Enjoy Delicious Foods</span>
+            <p>
+              Order your favorite meals on the go, track your delivery in
+              real-time, and unlock exclusive discounts only available on the
+              Bites app.
+            </p>
+            <div class="download-btns">
+              <a href="#" class="store-btn apple">
+                <i class="fa-brands fa-apple"></i>
+                <div class="store-info">
+                  <small>Download on the</small>
+                  <span>Apple Store</span>
+                </div>
+              </a>
+              <a href="#" class="store-btn google">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="store-info">
+                  <small>Get it from</small>
+                  <span>Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="app-mockup">
             <img
-              class="first-img"
-              src="images/pasta.webp"
-              alt=""
+              class="phone"
+              src="images/mobile.webp"
+              alt="Bites mobile app on phone"
               loading="lazy"
             />
-            <h2>Pasta</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Pasta is a type of Italian food typically made from unleavened
-              dough.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/french-fires.webp" alt="" loading="lazy" />
-            <h2>French Fires</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Fries are batons of deep-fried potato, commonly served hot and
-              crispy.
-            </p>
-            <div class="price">
-              <span>$55.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/Chicken-Shawarma.webp" alt="" loading="lazy" />
-            <h2>ChickenShawarma</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              A popular Middle Eastern dish made with spiced meat roasted on a
-              spit.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/fish-curry.webp" alt="" loading="lazy" />
-            <h2>Fish Currys</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Traditional Indian fish curry made with spicy gravy and herbs.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Popular Dishes -->
-    <!-- Start Services -->
-    <div class="services" id="about-us">
-      <div class="container">
-        <div class="services-content">
-          <div class="image">
-            <img class="salad" src="images/salad.webp" alt="" loading="lazy" />
-            <img class="chef" src="images/chef.webp" alt="" loading="lazy" />
             <img
-              class="cheese"
-              src="images/cheese.webp"
-              alt=""
+              class="rice-float"
+              src="images/rice.webp"
+              alt="Decorative rice bowl"
               loading="lazy"
             />
           </div>
-          <div class="services-text">
-            <h2>We Are More Than Multiple Service</h2>
-            <p>
-              This is a type of restaurant which typically serves food and
-              drinks, in addition to light refreshments such as baked goods or
-              snacks. The term comes from the French word meaning food.
-            </p>
-            <div class="services-list">
-              <div class="services-item">
-                <img src="images/map.webp" alt="" loading="lazy" />
-                Online Order
-              </div>
-              <div class="services-item">
-                <img src="images/map.webp" alt="" loading="lazy" />
-                Pre-Reservation
-              </div>
-              <div class="services-item">
-                <img src="images/service.webp" alt="" loading="lazy" />
-                24/7 Service
-              </div>
-              <div class="services-item">
-                <img src="images/food-place.webp" alt="" loading="lazy" />
-                Organized Foodie Place
-              </div>
-              <div class="services-item">
-                <img src="images/clean-kitchen.webp" alt="" loading="lazy" />
-                Clean Kitchen
-              </div>
-              <div class="services-item">
-                <img src="images/super-chef.webp" alt="" loading="lazy" />
-                Super Chefs
-              </div>
-            </div>
-            <a href="#">About Us</a>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- End Services -->
-    <!-- Start Menu -->
-    <div class="section-menu" id="section-menu">
-      <div class="container">
-        <h2>Our Regular Menu Pack</h2>
-        <ul class="menu-list">
-          <li><a href="#">Special Food</a></li>
-          <li><a href="#">Maxican</a></li>
-          <li><a href="#">Italian</a></li>
-          <li><a href="#">Japanese</a></li>
-          <li><a href="#">Drinkes</a></li>
-          <li><a href="#">Lunch</a></li>
-          <li><a href="#">More Item +</a></li>
-        </ul>
-        <div class="cards">
-          <div class="card">
-            <img
-              class="first-img"
-              src="images/pasta.webp"
-              alt=""
-              loading="lazy"
-            />
-            <h2>Pasta</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Pasta is a type of Italian food typically made from unleavened
-              dough.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/french-fires.webp" alt="" loading="lazy" />
-            <h2>French Fires</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Fries are batons of deep-fried potato, commonly served hot and
-              crispy.
-            </p>
-            <div class="price">
-              <span>$55.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/Chicken-Shawarma.webp" alt="" loading="lazy" />
-            <h2>ChickenShawarma</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              A popular Middle Eastern dish made with spiced meat roasted on a
-              spit.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/fish-curry.webp" alt="" loading="lazy" />
-            <h2>Fish Currys</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Traditional Indian fish curry made with spicy gravy and herbs.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              class="first-img"
-              src="images/pasta.webp"
-              alt=""
-              loading="lazy"
-            />
-            <h2>Pasta</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Pasta is a type of Italian food typically made from unleavened
-              dough.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/french-fires.webp" alt="" loading="lazy" />
-            <h2>French Fires</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Fries are batons of deep-fried potato, commonly served hot and
-              crispy.
-            </p>
-            <div class="price">
-              <span>$55.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/Chicken-Shawarma.webp" alt="" loading="lazy" />
-            <h2>ChickenShawarma</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              A popular Middle Eastern dish made with spiced meat roasted on a
-              spit.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/fish-curry.webp" alt="" loading="lazy" />
-            <h2>Fish Currys</h2>
-            <div class="star">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p>
-              Traditional Indian fish curry made with spicy gravy and herbs.
-            </p>
-            <div class="price">
-              <span>$35.00</span>
-              <a href="#">Add To Cart</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Menu -->
-    <!-- Start reservation-cta -->
-    <div class="reservation-cta">
-      <div class="container">
-        <div class="reserv-content">
-          <div class="left">
-            <h1>Do you Have Any Dinner Plan Today? Reserve Your Table</h1>
-            <p>
-              Make online reservations, read restaurant reviews from diners, and
-              earn points towards free meals. OpenTable is a real-time online
-              reservation.
-            </p>
-            <a href="#">Make Reservation</a>
-          </div>
-          <div class="right">
-            <div class="image">
-              <img src="images/Casserole.webp" alt="" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End reservation-cta -->
-    <!-- Start customers say -->
-    <div class="opinions" id="opinions">
-      <div class="container">
-        <div class="head">
-          <h2>What our customers say?</h2>
-          <div class="icon">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right right"></i>
-          </div>
-        </div>
-        <div class="customers">
-          <div class="customer">
-            <p>
-              "This place is great! Atmosphere is chill and cool but the staff
-              is also really friendly. They know what they're doing and what
-              they're talking about, and you can tell making the customers happy
-              is their main priority."
-            </p>
-            <img src="images/customer-01.webp" alt="" loading="lazy" />
-            <h1>Savannah Nguyen</h1>
-          </div>
-          <div class="customer">
-            <p>
-              "This place is great! Atmosphere is chill and cool but the staff
-              is also really friendly. They know what they're doing and what
-              they're talking about, and you can tell making the customers happy
-              is their main priority."
-            </p>
-            <img src="images/customer-02.webp" alt="" loading="lazy" />
-            <h1>Savannah Nguyen</h1>
-          </div>
-          <div class="customer">
-            <p>
-              "This place is great! Atmosphere is chill and cool but the staff
-              is also really friendly. They know what they're doing and what
-              they're talking about, and you can tell making the customers happy
-              is their main priority."
-            </p>
-            <img src="images/customer-03.webp" alt="" loading="lazy" />
-            <h1>Savannah Nguyen</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End customers say -->
-    <!-- Start Chefs Team -->
-    <div class="chefs-team" id="chefs-team">
-      <div class="container">
-        <div class="head">
-          <h2>meet our chefs</h2>
-          <div class="icon">
-            <i class="fa-solid fa-arrow-left"></i>
-            <i class="fa-solid fa-arrow-right right"></i>
-          </div>
-        </div>
-        <div class="chefs">
-          <div class="chef">
-            <img src="images/chef-01.webp" alt="" loading="lazy" />
-            <h2>Savannah Nguyen</h2>
-          </div>
-          <div class="chef">
-            <img src="images/chef-02.webp" alt="" loading="lazy" />
-            <h2>Savannah Nguyen</h2>
-          </div>
-          <div class="chef">
-            <img src="images/chef-03.webp" alt="" loading="lazy" />
-            <h2>Savannah Nguyen</h2>
-          </div>
-          <div class="chef">
-            <img src="images/chef-04.webp" alt="" loading="lazy" />
-            <h2>Savannah Nguyen</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Chefs Team -->
-    <!-- Start Download App -->
-    <div class="get-app">
-      <div class="container">
-        <div class="link">
-          <span>Never Feel Hungry!</span>
-          <span>Download Our Mobile App</span>
-          <span>Enjoy Delicious Foods</span>
-          <p>
-            Make online reservations, read restaurant reviews from diners, and
-            earn points towards free meals. OpenTable is a real-time online
-            reservation.
-          </p>
-          <div class="download">
-            <a href="#" class="iphone">
-              <i class="fa-brands fa-apple"></i>
-              <div class="info">
-                <p>Download on the</p>
-                <span>Apple Store</span>
-              </div>
-            </a>
-            <a href="#" class="android">
-              <i class="fa-brands fa-google-play" style="color: #1bb9ee"></i>
-              <div class="info">
-                <p>Get it from</p>
-                <span>Google Play</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="mobile">
-          <img class="phone" src="images/mobile.webp" alt="" loading="lazy" />
-          <img class="rice" src="images/rice.webp" alt="" loading="lazy" />
-        </div>
-      </div>
-    </div>
-    <!-- End Download App -->
+      </section>
+      <!-- End Download App -->
+    </main>
+
     <!-- Start Footer -->
-    <div class="footer" id="footer">
+    <footer class="footer" id="contact">
       <div class="container">
-        <div class="icon">
+        <div class="footer-brand">
           <i class="fa-solid fa-utensils"></i>
         </div>
-        <div class="contact">
-          <div class="social">
-            <h1>Subscribe Our Newseltter</h1>
-            <form>
-              <input type="email" placeholder="Enter Your Email" required />
-              <i class="fa-solid fa-arrow-right-long"></i>
+        <div class="footer-grid">
+          <div class="footer-col newsletter-col">
+            <h3>Subscribe Our Newsletter</h3>
+            <form id="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                required
+                id="newsletter-email"
+              />
+              <button type="submit" aria-label="Subscribe">
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </button>
             </form>
-            <div class="media-container">
-              <div class="media"><i class="fa-brands fa-facebook-f"></i></div>
-              <div class="media"><i class="fa-brands fa-twitter"></i></div>
-              <div class="media insta">
-                <i class="fa-brands fa-instagram"></i>
-              </div>
-              <div class="media"><i class="fa-brands fa-youtube"></i></div>
+            <div class="social-links">
+              <a href="#" class="social-icon" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="social-icon social-insta"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
             </div>
           </div>
-          <ul class="service">
-            <h1>Service</h1>
-            <li>Online Order</li>
-            <li>Pre-Reservation</li>
-            <li>24/7 Services</li>
-            <li>Foodie Place</li>
-            <li>Super Chefs</li>
-          </ul>
-          <ul class="quick-links">
-            <h1>Quick links</h1>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Reserve Table</a></li>
-            <li><a href="#">Order Foods</a></li>
-          </ul>
-          <ul class="about">
-            <h1>About</h1>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Benifits</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">our Chefs</a></li>
-          </ul>
-          <ul class="help">
-            <h1>Help</h1>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
+          <div class="footer-col">
+            <h3>Service</h3>
+            <ul>
+              <li><a href="#">Online Order</a></li>
+              <li><a href="#">Pre-Reservation</a></li>
+              <li><a href="#">24/7 Services</a></li>
+              <li><a href="#">Foodie Place</a></li>
+              <li><a href="#">Super Chefs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#chefs">Blogs</a></li>
+              <li><a href="#reservation">Reserve Table</a></li>
+              <li><a href="#">Order Foods</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Benefits</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#chefs">Our Chefs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Bites Restaurant. All rights reserved.</p>
         </div>
       </div>
-    </div>
+    </footer>
     <!-- End Footer -->
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3><i class="fa-solid fa-basket-shopping"></i> Your Order</h3>
+        <button class="cart-close" id="cart-close" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <div class="cart-empty" id="cart-empty">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p>Your cart is empty</p>
+          <span>Add some delicious items!</span>
+        </div>
+      </div>
+      <div class="cart-footer" id="cart-footer">
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <span id="cart-delivery">$5.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cart-total">$5.00</span>
+          </div>
+        </div>
+        <button class="cart-checkout" id="cart-checkout">
+          <i class="fa-solid fa-check"></i> Place Order
+        </button>
+        <button class="cart-clear" id="cart-clear">
+          <i class="fa-solid fa-trash"></i> Clear Cart
+        </button>
+      </div>
+    </aside>
+
+    <!-- Reservation Modal -->
+    <div class="reserv-overlay" id="reserv-overlay"></div>
+    <div class="reserv-modal" id="reserv-modal">
+      <div class="reserv-modal-header">
+        <h3><i class="fa-solid fa-calendar-check"></i> Reserve Your Table</h3>
+        <button
+          class="reserv-close"
+          id="reserv-close"
+          aria-label="Close reservation"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="reserv-steps">
+        <div class="step-dot active" data-step="1"><span>1</span>Area</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="2"><span>2</span>Date & Time</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="3"><span>3</span>Details</div>
+        <div class="step-line"></div>
+        <div class="step-dot" data-step="4"><span>4</span>Confirm</div>
+      </div>
+
+      <div class="reserv-body">
+        <!-- Step 1: Zone Selection -->
+        <div class="reserv-step active" id="reserv-step-1">
+          <h4>Choose Your Preferred Area</h4>
+          <div class="zone-cards">
+            <div class="zone-card" data-zone="window">
+              <div class="zone-icon">
+                <i class="fa-solid fa-window-maximize"></i>
+              </div>
+              <h5>Window Side</h5>
+              <p>3 tables · 2-4 guests</p>
+              <span class="zone-tag">Cozy View</span>
+            </div>
+            <div class="zone-card" data-zone="garden">
+              <div class="zone-icon"><i class="fa-solid fa-leaf"></i></div>
+              <h5>Garden Terrace</h5>
+              <p>4 tables · 2-6 guests</p>
+              <span class="zone-tag">Open Air</span>
+            </div>
+            <div class="zone-card" data-zone="hall">
+              <div class="zone-icon"><i class="fa-solid fa-house"></i></div>
+              <h5>Main Hall</h5>
+              <p>5 tables · 2-8 guests</p>
+              <span class="zone-tag">Classic</span>
+            </div>
+            <div class="zone-card" data-zone="vip">
+              <div class="zone-icon"><i class="fa-solid fa-crown"></i></div>
+              <h5>VIP Lounge</h5>
+              <p>2 tables · 2-10 guests</p>
+              <span class="zone-tag">Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Date, Time, Guests -->
+        <div class="reserv-step" id="reserv-step-2">
+          <h4>Pick Date, Time & Guests</h4>
+          <div class="reserv-form-grid">
+            <div class="reserv-field">
+              <label for="reserv-date"
+                ><i class="fa-solid fa-calendar"></i> Date</label
+              >
+              <input type="date" id="reserv-date" required />
+            </div>
+            <div class="reserv-field">
+              <label for="reserv-guests"
+                ><i class="fa-solid fa-users"></i> Guests</label
+              >
+              <select id="reserv-guests">
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9">9 Guests</option>
+                <option value="10">10 Guests</option>
+              </select>
+            </div>
+          </div>
+          <label class="time-label"
+            ><i class="fa-solid fa-clock"></i> Select Time Slot</label
+          >
+          <div class="time-slots" id="time-slots">
+            <button class="time-slot" data-time="12:00 PM">12:00 PM</button>
+            <button class="time-slot" data-time="1:00 PM">1:00 PM</button>
+            <button class="time-slot" data-time="2:00 PM">2:00 PM</button>
+            <button class="time-slot" data-time="3:00 PM">3:00 PM</button>
+            <button class="time-slot" data-time="4:00 PM">4:00 PM</button>
+            <button class="time-slot" data-time="5:00 PM">5:00 PM</button>
+            <button class="time-slot" data-time="6:00 PM">6:00 PM</button>
+            <button class="time-slot" data-time="7:00 PM">7:00 PM</button>
+            <button class="time-slot" data-time="8:00 PM">8:00 PM</button>
+            <button class="time-slot" data-time="9:00 PM">9:00 PM</button>
+            <button class="time-slot" data-time="10:00 PM">10:00 PM</button>
+            <button class="time-slot" data-time="11:00 PM">11:00 PM</button>
+          </div>
+          <div class="availability-msg" id="availability-msg"></div>
+        </div>
+
+        <!-- Step 3: Contact Info -->
+        <div class="reserv-step" id="reserv-step-3">
+          <h4>Your Contact Details</h4>
+          <div class="reserv-form-stack">
+            <div class="reserv-field">
+              <label for="reserv-name"
+                ><i class="fa-solid fa-user"></i> Full Name</label
+              >
+              <input
+                type="text"
+                id="reserv-name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="reserv-field">
+              <label for="reserv-phone"
+                ><i class="fa-solid fa-phone"></i> Phone Number</label
+              >
+              <input
+                type="tel"
+                id="reserv-phone"
+                placeholder="e.g. 01012345678"
+                required
+              />
+            </div>
+            <div class="reserv-field">
+              <label for="reserv-notes"
+                ><i class="fa-solid fa-comment"></i> Special Requests
+                (optional)</label
+              >
+              <textarea
+                id="reserv-notes"
+                rows="3"
+                placeholder="Any special requests or dietary needs..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="reserv-step" id="reserv-step-4">
+          <h4>Confirm Your Reservation</h4>
+          <div class="confirm-card">
+            <div class="confirm-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><small>Area</small><strong id="confirm-zone">—</strong></div>
+            </div>
+            <div class="confirm-row">
+              <i class="fa-solid fa-calendar"></i>
+              <div><small>Date</small><strong id="confirm-date">—</strong></div>
+            </div>
+            <div class="confirm-row">
+              <i class="fa-solid fa-clock"></i>
+              <div><small>Time</small><strong id="confirm-time">—</strong></div>
+            </div>
+            <div class="confirm-row">
+              <i class="fa-solid fa-users"></i>
+              <div>
+                <small>Guests</small><strong id="confirm-guests">—</strong>
+              </div>
+            </div>
+            <div class="confirm-row">
+              <i class="fa-solid fa-user"></i>
+              <div><small>Name</small><strong id="confirm-name">—</strong></div>
+            </div>
+            <div class="confirm-row">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <small>Phone</small><strong id="confirm-phone">—</strong>
+              </div>
+            </div>
+            <div
+              class="confirm-row"
+              id="confirm-notes-row"
+              style="display: none"
+            >
+              <i class="fa-solid fa-comment"></i>
+              <div>
+                <small>Notes</small><strong id="confirm-notes">—</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="reserv-nav">
+        <button class="reserv-btn-back" id="reserv-back" style="display: none">
+          <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+        <button class="reserv-btn-next" id="reserv-next">
+          Next <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button
+          class="reserv-btn-whatsapp"
+          id="reserv-whatsapp"
+          style="display: none"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
